@@ -1,0 +1,199 @@
+@use 'colors';
+
+body {
+  background-color: colors.$background;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, p, span, a, img {
+  margin: 0;
+}
+
+.container {
+  background-color: colors.$background-container;
+  border-radius: 4px;
+  box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.5);;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.infos {
+  display: block;
+  border-bottom: 2px dashed colors.$border-bottom;
+  max-width: 1000px;
+  width: 100%;
+
+  &__h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #contagem-regressiva {
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+
+  &__p {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+  }
+}
+
+.qrcode {
+  h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  p {
+    font-size: 1rem;
+  }
+
+  .social {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 25px;
+      transition: all ease .1s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .infos {
+    &__p {
+      display: block;
+    
+      &__item {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-top: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2rem;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .infos {
+    &__h1 {
+      font-size: 1.8rem;
+    }
+    
+    &__h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__h3 {
+      font-size: 1.4rem;
+    }
+
+    #contagem-regressiva {
+      font-size: 1.2rem;
+    }
+
+    &__p {
+      display: block;
+      
+      &__item {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+    }
+  } 
+
+  .qrcode {
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    img {
+      max-width: 200px;
+    }
+  }
+
+  .footer {
+    display: block;
+
+    .footer__p {
+      margin-bottom: 2rem;
+    }
+
+    .social {
+      justify-content: center;
+      padding: 0;
+    }
+  }
+}
